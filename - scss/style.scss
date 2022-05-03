@@ -1,0 +1,549 @@
+@import 'css-reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@700&display=swap');
+*{transition: .1s; letter-spacing: .05em;}
+body{font-family: 'Open Sans', sans-serif; color: #222;}
+img{pointer-events: none;}
+$font-1: 'Roboto', sans-serif;
+$color-1: #00897b;
+$color-2: #e4fdf9;
+// --------------------------------------------------
+.body{
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.main{
+	flex: 1;
+}
+.container{
+	box-sizing: content-box;
+	max-width: 1200px;
+	padding: 0 50px;
+	margin: 0 auto;
+}
+// --------------------------------------------------
+.header{
+	position: fixed;
+	width: 100%;
+	height: 90px;
+	background: #fff;
+	z-index: 1;
+	&__row{
+		height: 90px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__title{
+		font-size: 24px;
+		font-weight: 700;
+		letter-spacing: 0;
+	}
+	&__burger{
+		display: none;
+	}
+	&__nav{
+		display: flex;
+		align-items: center;
+	}
+	&__list{
+		display: flex;
+	}
+	&__link{
+		color: inherit;
+		font-size: 20px;
+		font-weight: 600;
+		padding: 0 16px;
+		line-height: 90px;
+		&:hover{
+			color: $color-1;
+		}
+	}
+	&__search{
+		display: block;
+		width: 19px;
+		height: 19px;
+		margin-left: 15px;
+		background: url(images/png-1.png) center/contain no-repeat;
+	}
+}
+// --------------------------------------------------
+.home{
+	background: url(images/jpg-1.jpg) center/cover no-repeat;
+	min-height: 600px;
+	height: 100vh;
+	max-height: 1500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	&__body{
+		color: #fff;
+		text-align: center;
+	}
+	&__title{
+		font-size: 60px;
+		font-weight: 600;
+	}
+	&__subtitle{
+		font-size: 22px;
+		margin: 30px 0 100px;
+	}
+	&__row{
+		display: flex;
+		justify-content: space-between;
+		max-width: 470px;
+		margin: 0 auto;
+	}
+	&__button{
+		color: #fff;
+		text-align: center;
+		display: inline-block;
+		width: 220px;
+		font-family: $font-1;
+		font-size: 20px;
+		font-weight: 700;
+		padding: 22px 0;
+		border: 3px solid #fff;
+		&:hover{
+			background: $color-1;
+			border: 3px solid $color-1;
+		}
+	}
+	&__arrow{
+		position: absolute;
+		width: 20px;
+		height: 50px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: 0 auto;
+		background: url(images/png-2.png) center/contain no-repeat;
+		animation: arrow 1s ease-in-out alternate infinite;
+	}
+	@keyframes arrow{
+		0%{margin-bottom: 60px;}
+		100%{margin-bottom: 30px;}
+	}
+}
+// --------------------------------------------------
+.text{
+	padding: 120px 0;
+	max-width: 630px;
+	text-align: center;
+	margin: 0 auto;
+	&__title{
+		font-size: 30px;
+		font-weight: 700;
+		margin-bottom: 35px;
+	}
+	&__subtitle{
+		font-size: 15px;
+		line-height: 22px;
+	}
+}
+.card{
+	&__row{
+		display: flex;
+		justify-content: space-between;
+		margin: 0 -15px;
+	}
+	&__column{
+		padding: 0 15px;
+		flex: 0 1 33.33%;
+		margin-bottom: 30px;
+	}
+}
+.item{
+	text-align: center;
+	&__image{
+		height: 50px;
+	}
+	&__title{
+		font-size: 20px;
+		font-weight: 600;
+		margin: 35px 0 20px;
+	}
+	&__subtitle{
+		font-size: 15px;
+		line-height: 25px;
+		
+	}
+}
+// --------------------------------------------------
+.about{
+	padding-bottom: 90px;
+	&__item{
+		padding: 0 70px;
+		display: flex;
+		flex-direction: column;
+	}
+	&__image{
+		align-self: center;
+	}
+	&__title{
+		flex: 1;
+	}
+}
+// --------------------------------------------------
+.button{
+	text-align: center;
+	display: inline-block;
+	font-size: 20px;
+	font-weight: 600;
+	padding: 20px 25px;
+	border: 2.5px solid #222;
+	color: inherit;
+	&:hover{
+		background: $color-1;
+		border: 2.5px solid $color-1;
+		color: #fff;
+	}
+}
+// --------------------------------------------------
+.servicing{
+	padding-bottom: 90px;
+	background: $color-2;
+	&__row{
+		flex-wrap: wrap;
+	}
+	&__item{
+		padding: 55px 40px;
+		background: #fff;
+		&:hover{
+			background: $color-1;
+		}
+		&:hover .servicing__image{
+			background-image: url(images/png-6-2.png);
+		}
+		&:hover .servicing__title,
+		&:hover .servicing__subtitle,
+		&:hover .servicing__button{
+			color: #fff;
+			border-color: #fff;
+		}
+	}
+	&__image{
+		margin-left: 14px;
+		height: 50px;
+		background: url(images/png-6-1.png) center/contain no-repeat;
+	}
+	&__button{
+		margin-top: 40px;
+		&:hover{
+			background: #fff;
+			color: $color-1 !important;
+		}
+	}
+}
+// --------------------------------------------------
+.button-roboto{
+	font-family: $font-1;
+	font-weight: 700;
+	padding: 22px 40px;
+	border: 3px solid #222;
+	&:hover{
+		background: $color-1;
+		border: 3px solid $color-1;
+	}
+}
+// --------------------------------------------------
+.portfolio{
+	padding-bottom: 120px;
+	&__list-1{
+		text-align: center;
+	}
+	&__list-2{
+		text-align: center;
+	}
+	&__button:not(:last-child){
+		margin-right: 20px;
+	}
+	&__row{
+		flex-wrap: wrap;
+		padding: 120px 0 90px;
+	}
+	&__image{
+		display: block;
+		width: 100%;
+	}
+}
+// --------------------------------------------------
+.pricing-plan{
+	background: #f0f0f0;
+	padding-bottom: 90px;
+	&__item{
+		background: #fff;
+		padding-bottom: 55px;
+	}
+	&__header{
+		background: #3949ab;
+		color: #fff;
+		clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+		padding: 45px 0 70px;
+	}
+	&__title{
+		font-size: 25px;
+		margin-bottom: 25px;
+	}
+	&__price{
+		font-size: 50px;
+		margin-left: 25px;
+		&:before{
+			content: '$';
+			font-size: 25px;
+			margin: 5px 0 0 -20px;
+			position: absolute;
+		}
+		&:after{
+			content: 'per month';
+			font-size: 17px;
+			margin-left: 5px;
+		}
+	}
+	&__ul{
+		padding: 40px 0 35px;
+	}
+	&__li{
+		font-size: 17px;
+		&:after{
+			content: '';
+			display: block;
+			max-width: 50%;
+			height: 0.5px;
+			margin: 15px auto 35px;
+			background: #222;
+		}
+	}
+}
+// --------------------------------------------------
+.our-team-member{
+	padding-bottom: 90px;
+	&__image{
+		max-width: 100%;
+		margin-bottom: 40px;
+	}
+	&__title{
+		font-size: 20px;
+		font-weight: 600;
+	}
+	&__subtitle{
+		font-size: 15px;
+		margin: 10px 0 30px;
+	}
+	&__icon-row{
+		display: flex;
+		justify-content: space-between;
+		max-width: 250px;
+		margin: 0 auto;
+	}
+	&__icon{
+		width: 20%;
+		height: 50px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		&_1{
+			background-image: url(images/png-7-1.png);
+			&:hover{
+				background-image: url(images/png-7-2.png);
+			}
+		}
+		&_2{
+			background-image: url(images/png-8-1.png);
+			&:hover{
+				background-image: url(images/png-8-2.png);
+			}
+		}
+		&_3{
+			background-image: url(images/png-9-1.png);
+			&:hover{
+				background-image: url(images/png-9-2.png);
+			}
+		}
+		&_4{
+			background-image: url(images/png-10-1.png);
+			&:hover{
+				background-image: url(images/png-10-2.png);
+			}
+		}
+	}
+}
+// --------------------------------------------------
+.blog{
+	background: $color-2;
+	padding-bottom: 120px;
+	&__row{
+		flex-wrap: wrap;
+	}
+	&__column{
+		flex: 0 1 50%;
+		&:nth-child(1){
+			order: 1;
+		}
+		&:nth-child(2){
+			order: 4;
+		}
+		&:nth-child(3){
+			order: 5;
+		}
+		&:nth-child(4){
+			order: 2;
+		}
+		&:nth-child(5){
+			order: 3;
+		}
+		&:nth-child(6){
+			order: 6;
+		}
+	}
+	&__image{
+		max-width: 100%;
+	}
+	&__text{
+		font-weight: 600;
+		max-width: 450px;
+		padding: 25px 0;
+		text-align: left;
+	}
+	&__title{
+		font-size: 25px;
+		color: inherit;
+		&:hover{
+			color: $color-1;
+		}
+	}
+	&__data{
+		font-size: 17px;
+		margin: 25px 0;
+		display: flex;
+	}
+	&__text-1{
+		margin-right: 40px;
+		&:before{
+			content: '';
+			display: inline-block;
+			width: 18px;
+			height: 18px;
+			margin: 0 8px -2px 0;
+			background: url(images/png-11.png) center/contain no-repeat;
+		}
+	}
+	&__text-2{
+		&:before{
+			content: '';
+			display: inline-block;
+			width: 18px;
+			height: 18px;
+			margin: 0 8px -2px 0;
+			background: url(images/png-12.png) center/contain no-repeat;
+		}
+	}
+	&__subtitle{
+		font-size: 15px;
+		line-height: 22px;
+		font-weight: 400;
+	}
+	&__button{
+		text-align: center;
+		margin-top: 90px;
+	}
+}
+// --------------------------------------------------
+.contact-us{
+	color: #fff;
+	background: #222;
+	padding-bottom: 120px;
+	&__row{
+		margin: -10px 0 70px;
+	}
+	&__input-column{
+		flex: 0 1 50%;
+	}
+	&__item{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__image-flex{
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		background: $color-1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__image{
+		width: 50px;
+		height: 50px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		&_1{
+			background-image: url(images/png-13.png);
+		}
+		&_2{
+			background-image: url(images/png-14.png);
+		}
+		&_3{
+			background-image: url(images/png-15.png);
+		}
+	}
+	&__contact{
+		font-size: 20px;
+		line-height: 28px;
+		font-weight: 600;
+		margin-top: 40px;
+	}
+	&__input{
+		text-align: left;
+		width: 100%;
+		padding: 25px 28px;
+		font-size: 20px;
+		font-weight: 600;
+		border-radius: 5px;
+	}
+	&__textarea{
+		resize: none;
+		width: 100%;
+		height: 320px;
+		font-size: 20px;
+		padding: 25px 28px;
+		border-radius: 5px;	
+		font-weight: 600;
+		
+	}
+	&__button-row{
+		margin-top: 30px;
+		text-align: right;
+	}
+	&__button{
+		font-family: $font-1;
+		font-size: 22px;
+		font-weight: 700;
+		width: 220px;
+		height: 76px;
+		border-radius: 5px;
+		color: #222;
+		background: #fff;
+		&:hover{
+			color: #fff;
+			background: $color-1;
+		}
+	}
+}
+// --------------------------------------------------
+.footer{
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #fff;
+	&__text{
+		font-family: $font-1;
+		font-size: 20px;
+		font-weight: 700;
+	}
+}
+@import 'media.scss';

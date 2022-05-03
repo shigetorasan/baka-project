@@ -1,0 +1,495 @@
+$media-1: 1.25;
+$media-2: 1.75;
+$media-3: 2.25;
+@media (max-width: 992px){
+	*{letter-spacing: .05em/$media-1;}
+	.container{
+		padding: 0 30px
+	}
+	.header{
+		height: 90px/$media-1;
+		&__row{
+			height: 90px/$media-1;
+		}
+		&__title{
+			font-size: 24px/$media-1;
+		}
+		&__link{
+			font-size: 20px/$media-1;
+			padding: 0 16px/$media-1;
+			line-height: 90px/$media-1;
+		}
+		&__search{
+			width: 19px/$media-1;
+			height: 19px/$media-1;
+			margin-left: 15px/$media-1;
+		}
+	}
+	.home{
+		&__title{
+			font-size: 60px/$media-1;
+		}
+		&__subtitle{
+			font-size: 22px/$media-1;
+			margin: 30px/$media-1 0 100px/$media-1;
+		}
+		&__row{
+			max-width: 470px/$media-1;
+		}
+		&__button{
+			width: 220px/$media-1;
+			font-size: 20px/$media-1;
+			padding: 22px/$media-1 0;
+			border: 3px/$media-1 solid #fff;
+			&:hover{
+				border: 3px/$media-1 solid $color-1;
+			}
+		}
+		&__arrow{
+			width: 20px/$media-1;
+			height: 50px/$media-1;
+		}
+		@keyframes arrow{
+			0%{margin-bottom: 60px/$media-1;}
+			100%{margin-bottom: 30px/$media-1;}
+		}
+	}
+	.text{
+		padding: 120px/$media-1 0;
+		max-width: 630px/$media-1;
+		&__title{
+			font-size: 30px/$media-1;
+			margin-bottom: 35px/$media-1;
+		}
+		&__subtitle{
+			font-size: 17.5px/$media-1;
+			line-height: 22px/$media-1;
+		}
+	}
+	.card{
+		&__row{
+			margin: 0 -15px/$media-1;
+		}
+		&__column{
+			padding: 0 15px/$media-1;
+			margin-bottom: 30px/$media-1;
+		}
+	}
+	.item{
+		&__image{
+			height: 50px/$media-1;
+		}
+		&__title{
+			font-size: 20px/$media-1;
+			margin: 35px/$media-1 0 20px/$media-1;
+		}
+		&__subtitle{
+			font-size: 17.5px/$media-1;
+			line-height: 25px/$media-1;
+		}
+	}
+	.about{
+		padding-bottom: 90px/$media-1;
+		&__item{
+			padding: 0 50px/$media-1;
+		}
+	}
+	.button{
+		font-size: 20px/$media-1;
+		padding: 20px/$media-1 25px/$media-1;
+		border: 2.5px/$media-1 solid #222;
+		&:hover{
+			border: 2.5px/$media-1 solid $color-1;
+		}
+	}
+	.servicing{
+		padding-bottom: 90px/$media-1;
+		&__column{
+			flex: 0 1 50%;
+		}
+		&__item{
+			padding: 55px/$media-1 40px/$media-1;
+		}
+		&__image{
+			margin-left: 10px/$media-1;
+		}
+		&__button{
+			margin-top: 40px/$media-1;
+		}
+	}
+	.button-roboto{
+		padding: 22px/$media-1 40px/$media-1;
+		border: 3px/$media-1 solid #222;
+		&:hover{
+			border: 3px/$media-1 solid $color-1;
+		}
+	}
+	.portfolio{
+		&__column{
+			flex: 0 1 50%;
+		}
+		padding-bottom: 120px/$media-1;
+		&__button:not(:last-child){
+			margin-right: 20px/$media-1;
+		}
+		&__row{
+			padding: 120px/$media-1 0 90px/$media-1;
+		}
+	}
+	.pricing-plan{
+		padding-bottom: 90px/$media-1;
+		&__item{
+			padding-bottom: 55px/$media-1;
+		}
+		&__header{
+			padding: 45px/$media-1 0 70px/$media-1;
+		}
+		&__title{
+			font-size: 25px/$media-1;
+			margin-bottom: 25px/$media-1;
+		}
+		&__price{
+			font-size: 50px/$media-1;
+			margin-left: 25px/$media-1;
+			&:before{
+				font-size: 25px/$media-1;
+				margin: 5px/$media-1 0 0 -20px/$media-1;
+			}
+			&:after{
+				font-size: 17.5px/$media-1;
+				margin-left: 5px/$media-1;
+			}
+		}
+		&__ul{
+			padding: 40px/$media-1 0 35px/$media-1;
+		}
+		&__li{
+			font-size: 17.5px/$media-1;
+			&:after{
+				height: 0.5px/$media-1;
+				margin: 15px/$media-1 auto 35px/$media-1;
+			}
+		}
+	}
+	.our-team-member{
+		padding-bottom: 90px/$media-1;
+		&__image{
+			margin-bottom: 40px/$media-1;
+		}
+		&__title{
+			font-size: 20px/$media-1;
+		}
+		&__subtitle{
+			font-size: 17.5px/$media-1;
+			margin: 10px/$media-1 0 30px/$media-1;
+		}
+		&__icon-row{
+			max-width: 250px/$media-1;
+		}
+		&__icon{
+			height: 50px/$media-1;
+		}
+	}
+	.blog{
+		padding-bottom: 120px/$media-1;
+		&__text{
+			max-width: 450px/$media-1;
+			padding: 25px/$media-1 0;
+		}
+		&__title{
+			font-size: 25px/$media-1;
+		}
+		&__data{
+			font-size: 17.5px/$media-1;
+			margin: 25px/$media-1 0;
+		}
+		&__text-1{
+			margin-right: 40px/$media-1;
+			&:before{
+				width: 18px/$media-1;
+				height: 18px/$media-1;
+				margin: 0 8px/$media-1 -2px/$media-1 0;
+			}
+		}
+		&__text-2{
+			&:before{
+				width: 18px/$media-1;
+				height: 18px/$media-1;
+				margin: 0 8px/$media-1 -2px/$media-1 0;
+			}
+		}
+		&__subtitle{
+			font-size: 17.5px/$media-1;
+			line-height: 22px/$media-1;
+		}
+		&__button{
+			margin-top: 90px/$media-1;
+		}
+	}
+	.contact-us{
+		padding-bottom: 120px/$media-1;
+		&__row{
+			margin: -10px/$media-1 0 70px/$media-1;
+		}
+		&__image-flex{
+			width: 100px/$media-1;
+			height: 100px/$media-1;
+		}
+		&__image{
+			width: 50px/$media-1;
+			height: 50px/$media-1;
+		}
+		&__contact{
+			font-size: 20px/$media-1;
+			line-height: 28px/$media-1;
+			margin-top: 40px/$media-1;
+		}
+		&__input{
+			padding: 25px/$media-1 28px/$media-1;
+			font-size: 20px/$media-1;
+		}
+		&__textarea{
+			height: 320px/$media-1;
+			font-size: 20px/$media-1;
+			padding: 25px/$media-1 28px/$media-1;
+		}
+		&__button-row{
+			margin-top: 30px/$media-1;
+		}
+		&__button{
+			font-size: 22px/$media-1;
+			width: 220px/$media-1;
+			height: 76px/$media-1;
+		}
+	}
+	.footer{
+		height: 70px/$media-1;
+		&__text{
+			font-size: 20px/$media-1;
+		}
+	}
+}
+@media (max-width: 767px){
+	.header{
+		&__title{
+			line-height: 72px;
+		}
+		&__burger{
+			display: block;
+			width: 30px;
+			height: 30px;
+			background: url(images/png-0.png) center/contain no-repeat;
+		}
+		&__nav{
+			display: none;
+		}
+	}
+	.home{
+		&__title{
+			font-size: 60px/$media-2;
+		}
+		&__subtitle{
+			font-size: 25px/$media-2;
+			margin: 30px/$media-2 0 100px/$media-2;
+		}
+		&__row{
+			max-width: 470px/$media-2;
+		}
+		&__button{
+			width: 220px/$media-2;
+			font-size: 20px/$media-2;
+			padding: 22px/$media-2 0;
+			margin-bottom: 15px;
+		}
+	}
+	.card{
+		&__column{
+			flex: 0 1 100%;
+		}
+		&__row{
+			flex-wrap: wrap;
+		}
+	}
+	.text{
+		max-width: 600px;
+		&__subtitle{
+			max-width: 600px;
+			margin: 0 auto;
+		}
+	}
+	.about{
+		&__column{
+			&:not(:last-child){
+				margin-bottom: 50px;
+			}
+		}
+		&__item{
+			max-width: 300px;
+			padding: 0;
+			margin: 0 auto;
+		}
+	}
+	.servicing{
+		&__item{
+			max-width: 500px;
+			margin: 0 auto 24px;
+		}
+	}
+	.portfolio{
+		&__list-1{
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			max-width: 200px;
+			margin: 0 auto;
+		}
+		&__button{
+			flex: 0 1 100%;
+		}
+		&__button{
+			&:not(:last-child){
+				margin: 0 0 15px;
+			}
+		}
+		&__row{
+			max-width: 500px;
+			margin: 0 auto;
+		}
+		&__column{
+			flex: 0 1 50%;
+		}
+	}
+	.pricing-plan{
+		&__item{
+			max-width: 500px;
+			margin: 0 auto 24px;
+		}
+	}
+	.our-team-member{
+		&__item{
+			max-width: 360px;
+			margin: 0 auto;
+		}
+		&__image{
+			width: 100%;
+			margin-bottom: 25px;
+		}
+	}
+	.blog{
+		&__column{
+			&:nth-child(1){
+				order: 1;
+			}
+			&:nth-child(2){
+				order: 3;
+			}
+			&:nth-child(3){
+				order: 5;
+			}
+			&:nth-child(4){
+				order: 2;
+			}
+			&:nth-child(5){
+				order: 4;
+			}
+			&:nth-child(6){
+				order: 6;
+			}
+		}
+		&__item{
+			max-width: 500px;
+			margin: 0 auto;
+		}
+		&__image{
+			width: 100%;
+		}
+		&__text{
+			margin: 0 auto;
+			text-align: center;
+			max-width: 500px;
+		}
+		&__data{
+			max-width: 250px;
+			margin: 20px auto;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+		&__text-1{
+			margin: 0;
+		}
+	}
+	.contact-us{
+		&__column{
+			display: flex;
+			justify-content: center;
+			margin-bottom: 40px;
+			padding: 0;
+		}
+		&__item{
+			flex-direction: row;
+			width: 255px;
+		}
+		&__image-flex{
+			width: 60px;
+			height: 60px;
+		}
+		&__image{
+			width: 30px;
+			height: 30px;
+		}
+		&__contact{
+			margin: 0 0 0 14px;
+			font-size: 14px;
+		}
+		&__button-row{
+			text-align: center;
+		}
+	}
+}
+@media (max-width: 520px){
+	.home{
+		min-height: 400px;
+		&__title{
+			font-size: 55px/$media-3;
+		}
+		&__subtitle{
+			font-size: 25px/$media-3;
+			margin: 30px/$media-3 0 100px/$media-3;
+		}
+	}
+}
+@media (max-width: 390px){
+	.home{
+		&__title{
+			display: none;
+		}
+		&__subtitle{
+			display: none;
+		}
+		&__row{
+			width: 208px;
+			&:before{
+				content: 'WebDevPro';
+				position: absolute;
+				color: #fff;
+				font-size: 30px;
+				font-weight: 600;
+				left: 0;
+				right: 0;
+				text-align: center;
+				width: 200px;
+				margin: 0 auto;
+				margin-top: -74px;
+				padding-bottom: 12px;
+				border-bottom: 0.3px solid rgba(#fff, .7);
+			}
+		}
+		&__button{
+			width: 220px/$media-3;
+			font-size: 20px/$media-3;
+			padding: 22px/$media-3 0;
+			margin-bottom: -20px;
+		}
+	}
+}
